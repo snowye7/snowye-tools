@@ -1,0 +1,30 @@
+{
+    "name": "snowye-tools",
+    "version": "0.0.2",
+    "description": "",
+    "module": "dist/esm/index.js",
+    "types": "dist/esm/index.d.ts",
+    "scripts": {
+        "dev": "father dev",
+        "build": "father build",
+        "build:deps": "father prebundle",
+        "prepublishOnly": "father doctor && npm run build"
+    },
+    "keywords": [],
+    "authors": [
+        "snowye <chenjingyudong@gmail.com>"
+    ],
+    "license": "MIT",
+    "files": [
+        "dist",
+        "compiled"
+    ],
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
+    },
+    "devDependencies": {
+        "father": "^4.4.0"
+    },
+    "peerDependencies": {}
+}
