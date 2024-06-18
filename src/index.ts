@@ -1,4 +1,6 @@
+import { ClassValue, clsx as _clsx } from "clsx"
 import dayjs from "dayjs"
+import { twMerge } from "tailwind-merge"
 
 export function filterObject<T extends Record<string, any>>(props: T): Partial<T> {
     return Object.keys(props).reduce((prev, item) => {
@@ -32,4 +34,8 @@ export async function requestAll<T = any>(fn: (pageNo: number, pageSize: number)
 
 export function lastTimeOfDay(time: number) {
     return dayjs(dayjs(time).format("YYYY-MM-DD")).valueOf() + 24 * 60 * 60 * 1000 - 1
+}
+
+export function clsx(...inputs: ClassValue[]) {
+    return twMerge(_clsx(...inputs))
 }
