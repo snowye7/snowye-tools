@@ -1,6 +1,6 @@
 {
     "name": "snowye-tools",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "",
     "module": "dist/esm/index.js",
     "types": "dist/esm/index.d.ts",
@@ -26,5 +26,8 @@
     "devDependencies": {
         "father": "^4.4.0"
     },
-    "peerDependencies": {}
+    "peerDependencies": {},
+    "dependencies": {
+        "dayjs": "^1.11.11"
+    }
 }
