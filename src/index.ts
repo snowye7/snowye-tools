@@ -49,3 +49,25 @@ export function lastTimeOfDay(time: number) {
 export function clsx(...inputs: ClassValue[]) {
     return twMerge(_clsx(...inputs))
 }
+
+/**
+ * 关于数字字符串的添加逗号
+ */
+export function addComma(number: number, commaPosition: number) {
+    if (commaPosition <= 0) {
+        return number
+    }
+    //从个位开始,每commaPosition位加一个逗号
+    let result = ""
+    const numberString = number.toString()
+    let len = numberString.length
+    while (len > 0) {
+        if (len > commaPosition) {
+            result = "," + numberString.slice(len - commaPosition, len) + result
+        } else {
+            result = numberString.slice(0, len) + result
+        }
+        len -= commaPosition
+    }
+    return result
+}
