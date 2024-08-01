@@ -55,7 +55,7 @@ export function clsx(...inputs: ClassValue[]) {
  */
 export function addComma(number: number, commaPosition: number) {
     if (commaPosition <= 0) {
-        return number
+        return number.toString()
     }
     //从个位开始,每commaPosition位加一个逗号
     let result = ""
